@@ -16,6 +16,24 @@ namespace Penguin.Cms.Email.Templating
     /// </summary>
     public class EmailTemplate : AuditableEntity, IPersistableEmailMessage, IEmailTemplate
     {
+        public IEnumerable<IFile> Attachments { get; set; }
+
+        public string BCCRecipients { get; set; }
+
+        IEnumerable<string> IEmailMessage.BCCRecipients => this.GetBCCRecipients();
+
+        [DisplayType("System.String.Html")]
+        [DontAllow(DisplayContexts.List)]
+        public string Body { get; set; }
+
+        public string CCRecipients { get; set; }
+
+        IEnumerable<string> IEmailMessage.CCRecipients => this.GetCCRecipients();
+
+        public bool Enabled { get; set; } = true;
+
+        public string From { get; set; }
+
         /// <summary>
         /// The name of the handler that will generate the email
         /// </summary>
@@ -23,30 +41,9 @@ namespace Penguin.Cms.Email.Templating
         [Display(Order = -1000)]
         public string HandlerName { get; set; }
 
-        public bool Enabled { get; set; } = true;
-
-        public string From { get; set; }
-
-        public string Subject { get; set; }
-
-        public string Recipients { get; set; }
-
-        public string CCRecipients { get; set; }
-
-        public string BCCRecipients { get; set; }
-
         public bool IsHtml { get; set; }
-
-        [DisplayType("System.String.Html")]
-        [DontAllow(DisplayContexts.List)]
-        public string Body { get; set; }
-
-        public IEnumerable<IFile> Attachments { get; set; }
-
-        IEnumerable<string> IEmailMessage.BCCRecipients => this.GetBCCRecipients();
-
-        IEnumerable<string> IEmailMessage.CCRecipients => this.GetCCRecipients();
-
+        public string Recipients { get; set; }
         IEnumerable<string> IEmailMessage.Recipients => this.GetRecipients();
+        public string Subject { get; set; }
     }
 }
