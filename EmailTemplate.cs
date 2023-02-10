@@ -18,6 +18,7 @@ namespace Penguin.Cms.Email.Templating
     {
         /// <inheritdoc/>
         public IEnumerable<IFile> Attachments { get; set; }
+
         /// <inheritdoc/>
 
         public string BCCRecipients { get; set; }
@@ -28,6 +29,7 @@ namespace Penguin.Cms.Email.Templating
         [DisplayType("System.String.Html")]
         [DontAllow(DisplayContexts.List)]
         public string Body { get; set; }
+
         /// <inheritdoc/>
 
         public string CCRecipients { get; set; }
@@ -46,12 +48,16 @@ namespace Penguin.Cms.Email.Templating
         [DontAllow(DisplayContexts.BatchEdit)]
         [Display(Order = -1000)]
         public string HandlerName { get; set; }
+
         /// <inheritdoc/>
 
         public bool IsHtml { get; set; }
+
         /// <inheritdoc/>
         public string Recipients { get; set; }
+
         IEnumerable<string> IEmailMessage.Recipients => this.GetRecipients();
+
         /// <inheritdoc/>
         public string Subject { get; set; }
     }
