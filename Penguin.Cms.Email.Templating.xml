@@ -10,22 +10,22 @@
             </summary>
         </member>
         <member name="P:Penguin.Cms.Email.Templating.EmailTemplate.Attachments">
-            <inheritdoc />
+            <inheritdoc/>
         </member>
         <member name="P:Penguin.Cms.Email.Templating.EmailTemplate.BCCRecipients">
-            <inheritdoc />
+            <inheritdoc/>
         </member>
         <member name="P:Penguin.Cms.Email.Templating.EmailTemplate.Body">
-            <inheritdoc />
+            <inheritdoc/>
         </member>
         <member name="P:Penguin.Cms.Email.Templating.EmailTemplate.CCRecipients">
-            <inheritdoc />
+            <inheritdoc/>
         </member>
         <member name="P:Penguin.Cms.Email.Templating.EmailTemplate.Enabled">
-            <inheritdoc />
+            <inheritdoc/>
         </member>
         <member name="P:Penguin.Cms.Email.Templating.EmailTemplate.From">
-            <inheritdoc />
+            <inheritdoc/>
         </member>
         <member name="P:Penguin.Cms.Email.Templating.EmailTemplate.HandlerName">
             <summary>
@@ -33,13 +33,13 @@
             </summary>
         </member>
         <member name="P:Penguin.Cms.Email.Templating.EmailTemplate.IsHtml">
-            <inheritdoc />
+            <inheritdoc/>
         </member>
         <member name="P:Penguin.Cms.Email.Templating.EmailTemplate.Recipients">
-            <inheritdoc />
+            <inheritdoc/>
         </member>
         <member name="P:Penguin.Cms.Email.Templating.EmailTemplate.Subject">
-            <inheritdoc />
+            <inheritdoc/>
         </member>
     </members>
 </doc>
